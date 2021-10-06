@@ -1,0 +1,25 @@
+{
+  "name": "metalamp2",
+  "version": "1.0.0",
+  "description": "MetaLamp task 2& Practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MartaGreen/MetaLamp2.git"
+  },
+  "keywords": [
+    "MetaLamp",
+    "Metalamp2",
+    "HTML",
+    "css"
+  ],
+  "author": "Mariia (iguana13131@gmail.com)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MartaGreen/MetaLamp2/issues"
+  },
+  "homepage": "https://github.com/MartaGreen/MetaLamp2#readme"
+}
