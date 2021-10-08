@@ -4,7 +4,9 @@
   "description": "MetaLamp task 2& Practice",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production",
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
@@ -21,5 +23,18 @@
   "bugs": {
     "url": "https://github.com/MartaGreen/MetaLamp2/issues"
   },
-  "homepage": "https://github.com/MartaGreen/MetaLamp2#readme"
+  "homepage": "https://github.com/MartaGreen/MetaLamp2#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "html-webpack-plugin": "^5.3.2",
+    "pug": "^2.0.4",
+    "pug-loader": "^2.4.0",
+    "sass": "^1.42.1",
+    "sass-loader": "^12.1.0",
+    "webpack": "^5.58.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "glob": "^7.2.0"
+  }
 }
