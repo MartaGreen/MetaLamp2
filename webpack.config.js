@@ -3,15 +3,16 @@ const htmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const glob = require("glob");
 
-const pugFiles = glob.sync(__dirname + "/src/*.pug");
-const htmlFilesArr = pugFiles.map((file) => {
-  console.log(file.split("/").reverse()[0]);
-  return new htmlWebpackPlugin({
-    template: file,
-    filename: file.split("/").reverse()[0].replace(/\.pug/, ".html"),
-  });
-});
-htmlFilesArr.push(new CleanWebpackPlugin());
+// Плагины
+const pugFiles = glob.sync(__dirname + "/src/*.pug"); // получаю все файлы с расширением pug
+const plugins = pugFiles.map(
+  (file) =>
+    new htmlWebpackPlugin({
+      template: file,
+      filename: file.split("/").reverse()[0].replace(/\.pug/, ".html"),
+    })
+);
+plugins.push(new CleanWebpackPlugin());
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
@@ -27,9 +28,6 @@ module.exports = {
   devServer: {
     static: "dist",
     hot: false,
-  },
-  watchOptions: {
-    poll: true,
   },
   module: {
     rules: [
@@ -64,5 +62,5 @@ module.exports = {
       },
     ],
   },
-  plugins: htmlFilesArr,
+  plugins: plugins,
 };
