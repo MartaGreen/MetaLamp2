@@ -8,7 +8,7 @@ const htmlFilesArr = pugFiles.map((file) => {
   console.log(file.split("/").reverse()[0]);
   return new htmlWebpackPlugin({
     template: file,
-    filename: file.split("/").reverse()[0].replace(/\.pug/, ".[hash].html"),
+    filename: file.split("/").reverse()[0].replace(/\.pug/, ".html"),
   });
 });
 htmlFilesArr.push(new CleanWebpackPlugin());
@@ -17,11 +17,18 @@ module.exports = {
   context: path.resolve(__dirname, "src"),
   mode: "development",
   entry: {
-    main: "./index.js",
+    index: "./index.js",
   },
   output: {
     filename: "[name].[contenthash].js",
     path: path.resolve(__dirname, "dist"),
+  },
+  devServer: {
+    static: "dist",
+    hot: false,
+  },
+  watchOptions: {
+    poll: true,
   },
   module: {
     rules: [
