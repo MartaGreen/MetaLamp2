@@ -1,0 +1,87 @@
+.register {
+  height: 646px;
+
+  .birth-label,
+  .service-data-lable {
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+    margin: 10px 0 5px 0;
+  }
+
+  .service-data {
+    margin-top: 10px;
+  }
+
+  .requests {
+    width: 100%;
+    height: 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: start;
+
+    .switch {
+      position: relative;
+      display: inline-block;
+
+      width: 40px;
+      height: 20px;
+
+      margin-right: 10px;
+
+      // hide default html checkbox
+      .switch-input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+
+        &:checked {
+          & + .switch-slider {
+            background: #ffffff;
+            border: 1px solid #bc9cff;
+
+            &::before {
+              -webkit-transform: translateX(18px);
+              -ms-transform: translateX(18px);
+              transform: translateX(18px);
+              background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+            }
+          }
+        }
+      }
+
+      .switch-slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+        border-radius: 10px;
+        background: #ffffff;
+        border: 1px solid rgba(31, 32, 65, 0.25);
+
+        &::before {
+          position: absolute;
+          content: "";
+          height: 12px;
+          width: 12px;
+          left: 4px;
+          bottom: 3px;
+          -webkit-transition: 0.4s;
+          transition: 0.4s;
+          border-radius: 50%;
+          background: rgba(31, 32, 65, 0.25);
+        }
+      }
+    }
+  }
+
+  .additional-field .additional-field__btn::before {
+    content: "войти";
+  }
+}
