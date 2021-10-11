@@ -12,13 +12,12 @@
     display: inline-block;
     text-transform: uppercase;
     font-weight: 700;
-    font-size: 11px;
+    font-size: 12px;
     margin: 10px 0 5px 0;
-    letter-spacing: 1.4;
   }
 
   .service-data {
-    margin-top: 3px;
+    margin-top: 1px 0 0 0;
   }
 
   .requests {
@@ -87,6 +86,10 @@
           background: rgba(31, 32, 65, 0.25);
         }
       }
+    }
+
+    .requests_msg {
+      font-size: 14px;
     }
   }
 
