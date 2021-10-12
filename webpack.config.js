@@ -2,6 +2,7 @@ const path = require("path");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const glob = require("glob");
+// const webpack = require("webpack");
 
 // Плагины
 const pugFiles = glob.sync(__dirname + "/src/*.pug"); // получаю все файлы с расширением pug
@@ -13,6 +14,13 @@ const plugins = pugFiles.map(
     })
 );
 plugins.push(new CleanWebpackPlugin());
+// plugins.push(
+//   new webpack.ProvidePlugin({
+//     $: "jquery",
+//     jQuery: "jquery",
+//     "window.jQuery": "jquery",
+//   })
+// );
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
@@ -20,6 +28,8 @@ module.exports = {
   entry: {
     index: "./index.js",
     styles_import: "./imports/styles.imports.js",
+    // datepicker: "../node_modules/air-datepicker/air-datepicker.js",
+    // jquery: "../node_modules/jquery/dist/jquery.min.js",
   },
   output: {
     filename: "[name].[contenthash].js",
@@ -49,6 +59,7 @@ module.exports = {
           "sass-loader",
         ],
       },
+      { test: /\.css$/, use: ["style-loader", "css-loader"] },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
