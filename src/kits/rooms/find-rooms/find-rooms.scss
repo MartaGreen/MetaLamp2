@@ -73,6 +73,10 @@
 
         display: none;
 
+        &.-show- {
+          display: block;
+        }
+
         .content__item {
           width: 100%;
           height: 30px;
