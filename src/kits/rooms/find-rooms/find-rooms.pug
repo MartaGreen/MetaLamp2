@@ -1,0 +1,25 @@
+.form-cont(class="find-room")
+  h1(class="title") Найдём номера под ваши пожелания
+  .calendar
+    .calendar__item(class="form-input-cont arrival")
+      label(for="" class="") Прибытие 
+      input(class="form-input" id="arrival_inp" placeholder="ДД.ММ.ГГГГ")
+    .calendar__item(class="form-input-cont depature")
+      label(for="" class="") Выезд 
+      input(class="form-input" id="depature_inp" placeholder="ДД.ММ.ГГГГ")
+  .guests-count(class="form-input-cont")
+    label(for="") Гости
+    .dropdown
+      button(class="dropdown__btn form-input") 
+        span(class="btn__name") Сколько гостей
+        .btn__icon
+      .dropdown__content
+        each item in ["взрослые", "дети", "младенцы"]
+          .content__item 
+            span(class="item__title")=item
+            .item__counter 
+              .counter__remove(class="counter__func counter__item -not-active- ") -
+              .counter__value(class="counter__item") 0
+              .counter__add(class="counter__func counter__item") +
+        button(class="content__btn") применить
+  button(class="form-btn find-room__btn") Подобрать номер

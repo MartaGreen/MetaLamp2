@@ -1,0 +1,161 @@
+.find-room {
+  .title {
+    margin-bottom: 13px !important;
+  }
+
+  .calendar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .calendar__item {
+      width: 47%;
+    }
+  }
+
+  .guests-count {
+    .dropdown {
+      .dropdown__btn {
+        width: 100%;
+        height: 44px;
+
+        background: #ffffff;
+
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        box-sizing: border-box;
+        border-radius: 2px;
+
+        padding: 12px 15px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        cursor: pointer;
+
+        .btn__name {
+          font-size: 14px;
+          line-height: 18px;
+          color: rgba(31, 32, 65, 0.75);
+          font-family: "Montserrat Light", sans-serif;
+
+          display: flex;
+          justify-content: start;
+          align-items: center;
+        }
+
+        .btn__icon {
+          width: 6px;
+          height: 6px;
+
+          border-left: 2px solid gray;
+          border-bottom: 2px solid gray;
+          transform: rotate(-45deg);
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+
+      .dropdown__content {
+        position: relative;
+
+        width: 100%;
+
+        background: #ffffff;
+
+        border: 1px solid rgba(31, 32, 65, 0.5);
+        box-sizing: border-box;
+        box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+
+        padding: 6px 7px 48px 15px;
+
+        display: none;
+
+        .content__item {
+          width: 100%;
+          height: 30px;
+
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 7px;
+
+          .item__title {
+            font-size: 12px;
+            font-weight: bold;
+            line-height: 15px;
+            text-transform: uppercase;
+            color: #1f2041;
+          }
+
+          .item__counter {
+            width: 92px;
+
+            display: flex;
+
+            .counter__item {
+              width: 30px;
+              height: 30px;
+
+              line-height: 22px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: 12px;
+
+              transition: 0.3s;
+            }
+
+            .counter__func {
+              border: 1px solid rgba(31, 32, 65, 0.5);
+              border-radius: 50%;
+
+              color: rgba(31, 32, 65, 0.5);
+
+              cursor: pointer;
+
+              -webkit-user-select: none;
+              -khtml-user-select: none;
+              -moz-user-select: none;
+              -o-user-select: none;
+              user-select: none;
+
+              &.-not-active- {
+                opacity: 0.38;
+                cursor: default;
+              }
+            }
+
+            .counter__value {
+              font-weight: bold;
+            }
+          }
+        }
+
+        .content__btn {
+          position: absolute;
+          bottom: 13px;
+          right: 0;
+
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 15px;
+          text-transform: uppercase;
+          color: #bc9cff;
+
+          background: none;
+          border: none;
+
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .form-btn.find-room__btn {
+    margin: 0;
+    margin-top: 21px;
+  }
+}
