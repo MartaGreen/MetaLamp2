@@ -1,1 +1,133 @@
+.datepicker {
+  font-family: "Montserrat";
 
+  margin-bottom: 50px;
+  .air-datepicker {
+    padding: 20px 20px 5px 20px;
+
+    width: 277px;
+
+    .air-datepicker--navigation {
+      border-bottom: 70px;
+      .air-datepicker-nav {
+        border: none;
+        padding: 0;
+
+        align-items: flex-start;
+
+        .air-datepicker-nav--title {
+          font-size: 18px;
+          font-weight: bold;
+          color: rgba(31, 32, 65, 1);
+
+          i {
+            color: rgba(31, 32, 65, 1);
+          }
+        }
+      }
+    }
+
+    .air-datepicker--content {
+      padding: 10px 0 0 0;
+      .air-datepicker-body {
+        .air-datepicker-body--day-names {
+          margin-top: 22px;
+          .air-datepicker-body--day-name {
+            font-style: normal;
+            font-weight: bold;
+            font-size: 12px;
+            line-height: 15px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: #bc9cff;
+            text-transform: unset;
+          }
+        }
+
+        .air-datepicker-body--cells {
+          margin-top: 13px;
+          grid-auto-rows: 40px;
+
+          .air-datepicker-cell {
+            font-family: "Montserrat";
+            font-style: normal;
+            font-size: 12px;
+            line-height: 15px;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: rgba(31, 32, 65, 0.5);
+
+            &.-current- {
+              display: flex;
+              align-items: center;
+              text-align: center;
+
+              background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+              border-radius: 50%;
+
+              color: white;
+              font-weight: bold;
+            }
+
+            &.-other-month- {
+              color: rgba(31, 32, 65, 0.25);
+            }
+
+            &.-selected- {
+              position: relative;
+              border-radius: 50%;
+              background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+
+              font-weight: bold;
+              color: white;
+
+              &.-range-from-::after,
+              &.-range-to-::before {
+                position: absolute;
+                right: 0;
+                top: 0;
+                background: red;
+
+                content: "";
+                width: 20px;
+                height: 100%;
+
+                z-index: -11;
+
+                background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+                opacity: 0.25;
+              }
+              &.-range-to-::before {
+                left: 0;
+              }
+            }
+
+            &.-in-range- {
+              background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+              opacity: 0.25;
+              color: rgba(31, 32, 65, 1);
+            }
+          }
+        }
+      }
+    }
+
+    .air-datepicker--buttons {
+      border: none;
+      margin-top: 10px;
+      .air-datepicker-button {
+        font-weight: bold;
+        font-size: 12px;
+        line-height: 15px;
+        text-transform: uppercase;
+        color: #bc9cff;
+
+        &:nth-child(2) {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
