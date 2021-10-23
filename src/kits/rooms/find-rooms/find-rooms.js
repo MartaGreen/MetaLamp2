@@ -1,6 +1,26 @@
 import "./find-rooms.scss";
 
+// CALENDAR
+const calendarField = document.getElementById("findRoonsCalendar");
+const datepicker = calendarField.querySelector(".datepicker");
+datepicker.setAttribute("id", "findRoomDatepicker");
+
+const dateBtns = Array.from(calendarField.querySelectorAll(".calendar__item"));
+console.log(calendarField);
+dateBtns.forEach((btn) => {
+  btn.addEventListener("click", () => datepicker.classList.toggle("-show-"));
+});
+
+// GUESTS
 const guestsCounterField = document.getElementById("guests-counter_field");
+
+const dates = Array.from(guestsCounterField.querySelectorAll(".calendar__item"));
+const calendar = guestsCounterField.querySelector(".calender");
+dates.forEach((date) => {
+  date.addEventListener("focus", () => {
+    calendar.classList.toggle("-show-");
+  });
+});
 
 // Show dropdown content
 const dropdownBtn = guestsCounterField.querySelector(".dropdown__btn");

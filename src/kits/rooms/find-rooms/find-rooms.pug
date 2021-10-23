@@ -1,12 +1,27 @@
 .form-cont(class="find-room")
   h1(class="title") Найдём номера под ваши пожелания
-  .calendar
-    .calendar__item(class="form-input-cont arrival")
-      label(for="" class="") Прибытие 
-      input(class="form-input" id="arrival_inp" placeholder="ДД.ММ.ГГГГ")
-    .calendar__item(class="form-input-cont depature")
-      label(for="" class="") Выезд 
-      input(class="form-input" id="depature_inp" placeholder="ДД.ММ.ГГГГ")
+  .calendar(id="findRoonsCalendar")
+    .calendar__items
+      //- .calendar__item(class="form-input-cont arrival")
+      //-   label(for="" class="") Прибытие 
+      //-   input(class="form-input" id="arrival_inp" placeholder="ДД.ММ.ГГГГ")
+      //- .calendar__item(class="form-input-cont depature")
+      //-   label(for="" class="") Выезд 
+      //-   input(class="form-input" id="depature_inp" placeholder="ДД.ММ.ГГГГ")
+      .calendar__item(class="form-input-cont arrival start-date__inp")
+        label(for="" class="") Прибытие 
+        .dropdown
+          button(class="dropdown__btn form-input") 
+            span(class="btn__name") ДД.ММ.ГГГГ
+            .btn__icon
+      .calendar__item(class="form-input-cont depature end-date__inp")
+        label(for="" class="") Выезд 
+        .dropdown
+          button(class="dropdown__btn form-input") 
+            span(class="btn__name") ДД.ММ.ГГГГ
+            .btn__icon
+    include ./../../calendar/calendar.pug
+
   .guests-count(class="form-input-cont" id="guests-counter_field")
     label(for="") Гости
     .dropdown

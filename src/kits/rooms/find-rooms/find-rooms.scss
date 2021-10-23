@@ -1,18 +1,33 @@
 .find-room {
+  position: relative;
   .title {
     margin-bottom: 13px !important;
   }
 
   .calendar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    margin-bottom: 10px;
+    .calendar__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-    .calendar__item {
-      width: 47%;
+      .calendar__item {
+        width: 47%;
+      }
+    }
+
+    .datepicker {
+      position: absolute;
+      top: 200px;
+      display: none;
+
+      &.-show- {
+        display: block;
+      }
     }
   }
 
+  .calendar .calendar__items .calendar__item,
   .guests-count {
     .dropdown {
       .dropdown__btn {
@@ -25,7 +40,7 @@
         box-sizing: border-box;
         border-radius: 2px;
 
-        padding: 12px 15px;
+        padding: 12px 14px;
 
         display: flex;
         justify-content: space-between;
@@ -51,6 +66,8 @@
         .btn__icon {
           width: 6px;
           height: 6px;
+
+          margin-right: 4px;
 
           border-left: 2px solid gray;
           border-bottom: 2px solid gray;
