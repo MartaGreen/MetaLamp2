@@ -24,6 +24,30 @@
             color: rgba(31, 32, 65, 1);
           }
         }
+
+        .air-datepicker-nav--action {
+          width: 20px;
+          height: 20px;
+
+          color: none;
+          background: none;
+
+          &:hover {
+            background: none;
+          }
+
+          svg {
+            width: 100%;
+            max-height: 100%;
+            fill: red;
+            path {
+              fill: red;
+            }
+            &.prev {
+              transform: rotate(180deg);
+            }
+          }
+        }
       }
     }
 

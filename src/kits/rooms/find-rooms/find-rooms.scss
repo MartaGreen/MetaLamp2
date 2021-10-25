@@ -13,6 +13,10 @@
 
       .calendar__item {
         width: 47%;
+
+        .btn__name {
+          text-transform: uppercase;
+        }
       }
     }
 

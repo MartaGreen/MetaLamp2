@@ -6,7 +6,6 @@ const datepicker = calendarField.querySelector(".datepicker");
 datepicker.setAttribute("id", "findRoomDatepicker");
 
 const dateBtns = Array.from(calendarField.querySelectorAll(".calendar__item"));
-console.log(calendarField);
 dateBtns.forEach((btn) => {
   btn.addEventListener("click", () => datepicker.classList.toggle("-show-"));
 });
