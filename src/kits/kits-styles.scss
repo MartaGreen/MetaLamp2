@@ -73,5 +73,9 @@
     letter-spacing: 0.7;
 
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

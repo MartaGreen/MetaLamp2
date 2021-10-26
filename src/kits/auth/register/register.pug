@@ -3,8 +3,14 @@ form(class="register form-cont")
   input(class="name form-input" placeholder="Имя" type="text")
   input(class="lastname form-input" placeholder="Фамилия" type="text")
   .gender
-    .gender-item(class="male")
+    .gender-item(class="male radio")
+      input(class="male__radio gender-item__radio" type="radio" name="gender" value="man" id="male")
+      label(for="male" class="gender-item__cutom-radio") 
+      label(for="male" class="gender-item__label") Мужчина
     .gender-item(class="female")
+      input(class="female__radio gender-item__radio" type="radio" name="gender" value="woman" id="female")
+      label(for="female" class="gender-item__cutom-radio") 
+      label(for="female" class="gender-item__label") Женщина
   .birth(class="form-input-cont")
     label(for="" class="birth-label") дата рождения
     input(tpe="text" class="birth-input form-input" placeholder="ДД.ММ.ГГГГ")

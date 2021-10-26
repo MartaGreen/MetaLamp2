@@ -19,6 +19,10 @@
 
       cursor: pointer;
 
+      &:hover {
+        background: linear-gradient(180deg, #bb9cff82 0%, #8ba5f985 100%);
+      }
+
       &:before {
         width: 95px;
         height: 40px;

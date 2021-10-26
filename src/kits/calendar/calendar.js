@@ -3,6 +3,7 @@ import AirDatepicker from "air-datepicker";
 let startDateInp;
 let endDateInp;
 
+// Кнопка отчистить, расширение функционала
 function clearBtnListener() {
   const cont = this.closest(".calendar");
 
