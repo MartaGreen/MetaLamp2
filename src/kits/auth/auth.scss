@@ -1,5 +1,5 @@
-.form-cont {
-  .additional-field {
+.form {
+  .form__additional-field {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,7 +23,7 @@
         background: linear-gradient(180deg, #bb9cff82 0%, #8ba5f985 100%);
       }
 
-      &:before {
+      &::before {
         width: 95px;
         height: 40px;
 
@@ -44,14 +44,14 @@
         font-size: 12px;
         line-height: 15px;
         text-align: center;
-        letter-spacing: 0.6;
+        letter-spacing: 0.8;
       }
     }
 
     .additional-field__msg {
       font-size: 13px;
       line-height: 18px;
-      letter-spacing: 0.5;
+      letter-spacing: 0.6;
     }
   }
 }

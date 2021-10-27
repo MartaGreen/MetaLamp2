@@ -1,4 +1,4 @@
-.form-cont {
+.form {
   width: 380px;
 
   padding: 40px 29px 32px 29px;
@@ -9,7 +9,7 @@
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  .title {
+  .form__title {
     width: 100%;
     text-align: left;
 
@@ -21,8 +21,30 @@
     margin-bottom: 20px;
   }
 
-  .form-input-cont {
-    label {
+  .form__field {
+    .form__input {
+      width: 100%;
+      height: 44px;
+
+      padding: 9px 0 8px 15px;
+      margin-bottom: 10px;
+
+      border: 1px solid #d1d1d8;
+      box-sizing: border-box;
+      border-radius: 4px;
+      box-shadow: 0.5px 0.7px 0.7px rgba(31, 32, 65, 0.25);
+
+      outline: none;
+
+      &::-webkit-input-placeholder {
+        color: rgba(31, 32, 65, 0.25);
+        font-size: 14px;
+        line-height: 25px;
+        font-family: "Montserrat extra Light";
+      }
+    }
+
+    .field__name {
       display: inline-block;
       text-transform: uppercase;
       font-weight: 700;
@@ -31,29 +53,7 @@
     }
   }
 
-  .form-input {
-    width: 100%;
-    height: 44px;
-
-    padding: 9px 0 8px 15px;
-    margin-bottom: 10px;
-
-    border: 1px solid #d1d1d8;
-    box-sizing: border-box;
-    border-radius: 4px;
-    box-shadow: 0.5px 0.5px 0.5px rgba(31, 32, 65, 0.25);
-
-    outline: none;
-
-    &::-webkit-input-placeholder {
-      color: rgba(31, 32, 65, 0.25);
-      font-size: 14px;
-      line-height: 25px;
-      font-family: "Montserrat extra Light";
-    }
-  }
-
-  .form-btn {
+  .form__btn {
     width: 100%;
     height: 44px;
 

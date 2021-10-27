@@ -1,7 +1,7 @@
 import "./find-rooms.scss";
 
 // CALENDAR
-const calendarField = document.getElementById("findRoonsCalendar");
+const calendarField = document.getElementById("findRoomsCalendar");
 const datepicker = calendarField.querySelector(".datepicker");
 datepicker.setAttribute("id", "findRoomDatepicker");
 

@@ -1,6 +1,6 @@
 .find-room {
   position: relative;
-  .title {
+  .form__title {
     margin-bottom: 13px !important;
   }
 
@@ -52,7 +52,7 @@
 
         cursor: pointer;
 
-        &.form-input {
+        &.form__input {
           margin-bottom: 0;
         }
 
@@ -199,6 +199,10 @@
         }
       }
     }
+  }
+
+  .guests-count {
+    margin-bottom: 21px;
   }
 
   .form-btn.find-room__btn {

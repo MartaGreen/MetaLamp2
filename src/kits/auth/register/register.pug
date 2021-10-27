@@ -1,9 +1,10 @@
-form(class="register form-cont")
-  h1(class="title") Регистрация аккаунта
-  input(class="name form-input" placeholder="Имя" type="text")
-  input(class="lastname form-input" placeholder="Фамилия" type="text")
-  .gender
-    .gender-item(class="male radio")
+form(class="register form")
+  h1(class="form__title") Регистрация аккаунта
+  .form__field
+    input(class="form__input firstname" placeholder="Имя" type="text")
+    input(class="form__input lastname" placeholder="Фамилия" type="text")
+  .form__gender
+    .gender-item(class="male")
       input(class="male__radio gender-item__radio" type="radio" name="gender" value="man" id="male")
       label(for="male" class="gender-item__cutom-radio") 
       label(for="male" class="gender-item__label") Мужчина
@@ -11,19 +12,19 @@ form(class="register form-cont")
       input(class="female__radio gender-item__radio" type="radio" name="gender" value="woman" id="female")
       label(for="female" class="gender-item__cutom-radio") 
       label(for="female" class="gender-item__label") Женщина
-  .birth(class="form-input-cont")
-    label(for="" class="birth-label") дата рождения
-    input(tpe="text" class="birth-input form-input" placeholder="ДД.ММ.ГГГГ")
-  .service-data(class="form-input-cont")
-    label(class="service-data-lable") данные для входа в сервис
-    input(tpe="text" class="email form-input" placeholder="Email")
-    input(tpe="text" class="password form-input" placeholder="Пароль")
-  .requests(class="form-input-cont")
-    label(class="switch")
-      input(type="checkbox" class="switch-input")
-      span(class="switch-slider")
-    span(class="requests_msg") Получать спецпредложения
-  button(class="form-btn login-btn") перейти к оплате
-  .additional-field
+  .form__field(class="birth")
+    label(for="" class="birth__label field__name") дата рождения
+    input(tpe="text" class="birth__input form__input" placeholder="ДД.ММ.ГГГГ")
+  .form__field(class="service-data")
+    label(class="service-data__lable field__name") данные для входа в сервис
+    input(tpe="text" class="email form__input" placeholder="Email")
+    input(tpe="text" class="password form__input" placeholder="Пароль")
+  .form__offers
+    label(class="offers__switch")
+      input(type="checkbox" class="switch__input")
+      span(class="switch__slider")
+    span(class="offers__msg") Получать спецпредложения
+  button(class="form__btn register__btn") перейти к оплате
+  .form__additional-field
     span(class="additional-field__msg") Уже есть аккаунт на Toxin
     button(class="additional-field__btn")

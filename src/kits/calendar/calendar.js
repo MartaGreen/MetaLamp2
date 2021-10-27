@@ -22,6 +22,7 @@ let applyBtn = {
     const cont = e.$customContainer;
 
     const clearBtn = cont.querySelector(".air-datepicker-button");
+    clearBtn.setAttribute("type", "button");
     clearBtn.removeEventListener("click", clearBtnListener);
     clearBtn.addEventListener("click", clearBtnListener);
 

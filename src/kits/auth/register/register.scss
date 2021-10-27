@@ -1,19 +1,10 @@
 .register {
   height: 646px;
 
-  .form-input {
-    &.lastname {
-      margin-bottom: 9px;
-    }
-    &.password {
-      margin-bottom: 6px;
-    }
-  }
-
-  .gender {
+  .form__gender {
     width: 100%;
     height: 24px;
-    margin-bottom: 11px;
+    margin-bottom: 13px;
 
     display: flex;
     align-items: center;
@@ -70,11 +61,19 @@
     }
   }
 
-  .service-data {
-    margin-top: 1px 0 0 0;
+  .form__field {
+    .form__input {
+      &.lastname {
+        margin-bottom: 8px;
+      }
+
+      &.password {
+        margin-bottom: 8px;
+      }
+    }
   }
 
-  .requests {
+  .form__offers {
     width: 100%;
     height: 24px;
 
@@ -82,9 +81,9 @@
     align-items: center;
     justify-content: start;
 
-    margin-bottom: 15px;
+    margin-bottom: 11px;
 
-    .switch {
+    .offers__switch {
       position: relative;
       display: inline-block;
 
@@ -94,27 +93,27 @@
       margin-right: 10px;
 
       // hide default html checkbox
-      .switch-input {
+      .switch__input {
         opacity: 0;
         width: 0;
         height: 0;
 
         &:checked {
-          & + .switch-slider {
+          & + .switch__slider {
             background: #ffffff;
             border: 1px solid #bc9cff;
 
             &::before {
-              -webkit-transform: translateX(18px);
-              -ms-transform: translateX(18px);
-              transform: translateX(18px);
+              -webkit-transform: translateX(20px);
+              -ms-transform: translateX(20px);
+              transform: translateX(20px);
               background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
             }
           }
         }
       }
 
-      .switch-slider {
+      .switch__slider {
         position: absolute;
         cursor: pointer;
         top: 0;
@@ -132,7 +131,7 @@
           content: "";
           height: 12px;
           width: 12px;
-          left: 4px;
+          left: 3px;
           bottom: 3px;
           -webkit-transition: 0.4s;
           transition: 0.4s;
@@ -142,12 +141,12 @@
       }
     }
 
-    .requests_msg {
+    .offers__msg {
       font-size: 14px;
     }
   }
 
-  .additional-field .additional-field__btn::before {
+  .form__additional-field .additional-field__btn::before {
     content: "войти";
   }
 }
