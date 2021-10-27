@@ -5,13 +5,17 @@
   .air-datepicker {
     padding: 20px 20px 5px 20px;
 
-    width: 277px;
+    width: 278px;
 
     .air-datepicker--navigation {
       border-bottom: 70px;
       .air-datepicker-nav {
+        margin: 1px auto 0 auto;
+
         border: none;
         padding: 0;
+
+        width: 98%;
 
         align-items: flex-start;
 
@@ -26,22 +30,25 @@
         }
 
         .air-datepicker-nav--action {
-          width: 20px;
-          height: 20px;
+          width: 18px;
+          height: 18px;
 
           color: none;
           background: none;
 
           &:hover {
             background: none;
+            svg path {
+              fill: rgba(31, 32, 65, 0.5);
+            }
           }
 
           svg {
             width: 100%;
             max-height: 100%;
-            fill: red;
             path {
-              fill: red;
+              fill: #bc9cff;
+              stroke: none;
             }
             &.prev {
               transform: rotate(180deg);
@@ -140,20 +147,30 @@
 
     .air-datepicker--buttons {
       border: none;
-      margin-top: 10px;
+      margin-top: 11px;
+      padding: 0 0 5px 0;
       .air-datepicker-button {
         font-weight: bold;
         font-size: 12px;
         line-height: 15px;
         text-transform: uppercase;
         color: #bc9cff;
+        letter-spacing: 0.5;
+
+        display: flex;
+        padding: 0;
+
+        span {
+          justify-content: flex-start;
+        }
 
         span:hover {
           color: rgba(31, 32, 65, 0.5);
         }
 
-        &:nth-child(2) {
-          text-align: right;
+        &:nth-child(2) span {
+          justify-content: flex-end;
+          padding-right: -5px;
         }
 
         &:hover {
