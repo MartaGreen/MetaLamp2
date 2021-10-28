@@ -188,6 +188,10 @@
 
             padding: 0;
 
+            &:hover {
+              color: rgba(31, 32, 65, 0.5);
+            }
+
             &.cancel {
               visibility: hidden;
 

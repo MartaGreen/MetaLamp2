@@ -69,3 +69,15 @@ datepickers.forEach((calendar) => {
     },
   });
 });
+
+// Появление и скрытие календарей по клику на дропдаун
+const calendarField = document.getElementById("findRoomsCalendar");
+const datepicker = calendarField.querySelector(".datepicker");
+datepicker.setAttribute("id", "findRoomDatepicker");
+
+const dateBtns = Array.from(calendarField.querySelectorAll(".calendar__item"));
+dateBtns.forEach((btn) => {
+  btn
+    .querySelector(".dropdown")
+    .addEventListener("click", () => datepicker.classList.toggle("-show-"));
+});
