@@ -1,0 +1,31 @@
+-
+  var roomData = [{
+    imgs: ["./assets/luxury_room.png"],
+    num: 888,
+    type: "люкс",
+    price: 9990,
+    rating: 5,
+    comments: 145 // планируется сделать как массив комментариев, кол-во комментариев - длина массива
+  }, {
+    imgs: ["./assets/standart_room.png"],
+    num: 840,
+    type: "стандартный",
+    price: 9900,
+    rating: 4,
+    comments: 65,
+  }]
+
+  function convertNumToPrice(num) {
+    num = num.toString()
+    console.log(num);
+    // split("").reverse().join("") - переворачивает строку,чтобы разделить по три с конца
+    // .match(/.{1,3}/g) - деление по три
+    //.reverse() - переворачивает обратно
+    // .map(elem => elem.split("").reverse().join("")) - переворачивает каждый элемент в правильный порядок:
+    // "abcd" стала ["a", "dcb"], после переворота отдельных элементов ["a", "bcd"]
+    return num.split("").reverse().join("").match(/.{1,3}/g).reverse().map(elem => elem.split("").reverse().join("")).join(" ")
+  }
+
+each room in roomData
+  include ./room-details.mixin.pug
+  +roomDetails(room)

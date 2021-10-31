@@ -14,13 +14,6 @@ const plugins = pugFiles.map(
     })
 );
 plugins.push(new CleanWebpackPlugin());
-// plugins.push(
-//   new webpack.ProvidePlugin({
-//     $: "jquery",
-//     jQuery: "jquery",
-//     "window.jQuery": "jquery",
-//   })
-// );
 
 module.exports = {
   context: path.resolve(__dirname, "src"),
@@ -70,6 +63,13 @@ module.exports = {
             },
           },
         ],
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        loader: "file-loader",
+        options: {
+          name: "assets/[name].[ext]",
+        },
       },
     ],
   },
