@@ -1,0 +1,18 @@
+mixin guestsCounter
+  .form__field(class="guests-count" id="guests-counter_field") 
+    label(for="" class="field__name") Гости
+    .dropdown
+      .dropdown__btn(class="form__input") 
+        span(class="btn__name") Сколько гостей
+        .btn__icon
+      .dropdown__content
+        each item in ["взрослые", "дети", "младенцы"]
+          .content__item 
+            span(class="item__title")=item
+            .item__counter 
+              .counter__remove(class="counter__func counter__item -not-active- ") -
+              .counter__value(class="counter__item") 0
+              .counter__add(class="counter__func counter__item") +
+        .content__btns
+          button(class="content__btn cancel" type="button") отчистить
+          button(class="content__btn apply" type="button") применить

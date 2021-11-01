@@ -1,0 +1,16 @@
+mixin calendar
+  .calendar(id="findRoomsCalendar")
+    .calendar__items
+      .calendar__item(class="form__field arrival start-date__inp")
+        label(for="" class="field__name") Прибытие 
+        .dropdown
+          .dropdown__btn(class="form__input") 
+            span(class="btn__name") дд.мм.гггг
+            .btn__icon
+      .calendar__item(class="form__field depature end-date__inp")
+        label(for="" class="field__name") Выезд 
+        .dropdown
+          .dropdown__btn(class="form__input") 
+            span(class="btn__name") дд.мм.гггг
+            .btn__icon
+    include ../../../calendar/calendar.pug

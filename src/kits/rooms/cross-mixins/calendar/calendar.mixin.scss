@@ -1,0 +1,25 @@
+.calendar {
+  .calendar__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .calendar__item {
+      width: 47%;
+
+      .btn__name {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .datepicker {
+    position: absolute;
+    top: 200px;
+    display: none;
+
+    &.-show- {
+      display: block;
+    }
+  }
+}

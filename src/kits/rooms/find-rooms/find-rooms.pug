@@ -1,36 +1,8 @@
 .form(class="find-room")
   h1(class="form__title") Найдём номера под ваши пожелания
-  .calendar(id="findRoomsCalendar")
-    .calendar__items
-      .calendar__item(class="form__field arrival start-date__inp")
-        label(for="" class="field__name") Прибытие 
-        .dropdown
-          .dropdown__btn(class="form__input") 
-            span(class="btn__name") дд.мм.гггг
-            .btn__icon
-      .calendar__item(class="form__field depature end-date__inp")
-        label(for="" class="field__name") Выезд 
-        .dropdown
-          .dropdown__btn(class="form__input") 
-            span(class="btn__name") дд.мм.гггг
-            .btn__icon
-    include ./../../calendar/calendar.pug
+  include ../cross-mixins/calendar/calendar.mixin.pug
+  +calendar
 
-  .form__field(class="guests-count" id="guests-counter_field")
-    label(for="" class="field__name") Гости
-    .dropdown
-      .dropdown__btn(class="form__input") 
-        span(class="btn__name") Сколько гостей
-        .btn__icon
-      .dropdown__content
-        each item in ["взрослые", "дети", "младенцы"]
-          .content__item 
-            span(class="item__title")=item
-            .item__counter 
-              .counter__remove(class="counter__func counter__item -not-active- ") -
-              .counter__value(class="counter__item") 0
-              .counter__add(class="counter__func counter__item") +
-        .content__btns
-          button(class="content__btn cancel" type="button") отчистить
-          button(class="content__btn apply" type="button") применить
+  include ../cross-mixins/guests-counter/guests-counter.mixin.pug
+  +guestsCounter
   button(class="form__btn find-room__btn" type="button") Подобрать номер
