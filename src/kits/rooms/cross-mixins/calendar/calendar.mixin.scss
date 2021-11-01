@@ -18,7 +18,12 @@
     top: 200px;
     display: none;
 
-    &.-show- {
+    // &.-show- {
+    //   display: block;
+    // }
+  }
+  &.-show- {
+    .datepicker {
       display: block;
     }
   }

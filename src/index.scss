@@ -4,6 +4,14 @@ body {
   font-family: "Montserrat";
 }
 
+.-show-.-visible- {
+  position: relative;
+  .datepicker {
+    position: relative;
+    top: 0;
+  }
+}
+
 .datepicker {
   z-index: 1000;
 }

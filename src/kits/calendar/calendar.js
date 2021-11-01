@@ -11,7 +11,7 @@ function clearBtnListener() {
   dropdowns.forEach((dropdown) => (dropdown.innerHTML = "дд.мм.гггг"));
 
   const datepicker = cont.querySelector(".datepicker");
-  datepicker.classList.remove("-show-");
+  cont.classList.remove("-show-");
 }
 
 // Кнопка календаря принять
@@ -33,7 +33,7 @@ let applyBtn = {
     depature.innerHTML = endDateInp || "дд.мм.гггг";
 
     const datepicker = cont.querySelector(".datepicker");
-    datepicker.classList.remove("-show-");
+    cont.classList.remove("-show-");
   },
 };
 
@@ -79,5 +79,5 @@ const dateBtns = Array.from(calendarField.querySelectorAll(".calendar__item"));
 dateBtns.forEach((btn) => {
   btn
     .querySelector(".dropdown")
-    .addEventListener("click", () => datepicker.classList.toggle("-show-"));
+    .addEventListener("click", () => calendarField.classList.toggle("-show-"));
 });
