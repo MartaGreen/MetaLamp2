@@ -15,12 +15,7 @@
 
   .datepicker {
     position: absolute;
-    top: 200px;
     display: none;
-
-    // &.-show- {
-    //   display: block;
-    // }
   }
   &.-show- {
     .datepicker {

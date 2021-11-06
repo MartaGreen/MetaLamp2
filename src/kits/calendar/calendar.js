@@ -21,19 +21,21 @@ let applyBtn = {
   onClick: (e) => {
     const cont = e.$customContainer;
 
-    const clearBtn = cont.querySelector(".air-datepicker-button");
-    clearBtn.setAttribute("type", "button");
-    clearBtn.removeEventListener("click", clearBtnListener);
-    clearBtn.addEventListener("click", clearBtnListener);
+    if (cont.querySelector(".calendar__items")) {
+      const clearBtn = cont.querySelector(".air-datepicker-button");
+      clearBtn.setAttribute("type", "button");
+      clearBtn.removeEventListener("click", clearBtnListener);
+      clearBtn.addEventListener("click", clearBtnListener);
 
-    const arrival = cont.querySelector(".start-date__inp").querySelector(".btn__name");
-    const depature = cont.querySelector(".end-date__inp").querySelector(".btn__name");
+      const arrival = cont.querySelector(".start-date__inp").querySelector(".btn__name");
+      const depature = cont.querySelector(".end-date__inp").querySelector(".btn__name");
 
-    arrival.innerHTML = startDateInp || "дд.мм.гггг";
-    depature.innerHTML = endDateInp || "дд.мм.гггг";
+      arrival.innerHTML = startDateInp || "дд.мм.гггг";
+      depature.innerHTML = endDateInp || "дд.мм.гггг";
 
-    const datepicker = cont.querySelector(".datepicker");
-    cont.classList.remove("-show-");
+      const datepicker = cont.querySelector(".datepicker");
+      cont.classList.remove("-show-");
+    }
   },
 };
 
@@ -68,16 +70,4 @@ datepickers.forEach((calendar) => {
       }
     },
   });
-});
-
-// Появление и скрытие календарей по клику на дропдаун
-const calendarField = document.getElementById("findRoomsCalendar");
-const datepicker = calendarField.querySelector(".datepicker");
-datepicker.setAttribute("id", "findRoomDatepicker");
-
-const dateBtns = Array.from(calendarField.querySelectorAll(".calendar__item"));
-dateBtns.forEach((btn) => {
-  btn
-    .querySelector(".dropdown")
-    .addEventListener("click", () => calendarField.classList.toggle("-show-"));
 });
