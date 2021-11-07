@@ -1,0 +1,140 @@
+.room-reservation {
+  .room-data {
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    color: rgba(31, 32, 65, 0.5);
+
+    margin-bottom: 11px;
+
+    .room-data__num {
+      display: flex;
+      justify-content: flex-start;
+
+      .num__article,
+      .num__value,
+      .num__type {
+        color: #1f2041;
+        display: flex;
+      }
+
+      .num__article {
+        align-items: flex-end;
+        padding-bottom: 2px;
+      }
+
+      .num__value {
+        font-size: 24px;
+        line-height: 29px;
+        margin: 0 8px 0 3px;
+      }
+
+      .num__type {
+        font-size: 12px;
+        text-transform: uppercase;
+        color: #bc9cff;
+
+        align-items: flex-end;
+        margin-top: 4px;
+        min-width: 1px;
+        min-height: 18px;
+      }
+    }
+
+    .room-data__price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      width: 100px;
+      margin-top: 6px;
+
+      .price__value,
+      .price__article {
+        color: rgba(31, 32, 65, 0.5);
+        display: flex;
+      }
+
+      .price__article {
+        font-size: 12px;
+        font-weight: normal;
+        align-items: flex-end;
+        padding-top: 4px;
+      }
+    }
+  }
+
+  .form__field.guests-count {
+    margin-bottom: 19px;
+  }
+
+  .calculations {
+    .calculation__item {
+      width: 100%;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+
+      margin-bottom: 10px;
+
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 24px;
+      color: rgba(31, 32, 65, 0.75);
+
+      .calculation__type {
+        display: flex;
+
+        .text {
+          max-width: 214px;
+        }
+
+        .calculation__info {
+          width: 18px;
+          height: 18px;
+
+          margin-left: 5px;
+
+          border-radius: 50%;
+          border: 1px solid rgba(31, 32, 65, 0.25);
+
+          display: flex;
+          // align-items: center;
+          justify-content: center;
+
+          font-weight: bold;
+          font-size: 12px;
+          line-height: 14px;
+          color: rgba(31, 32, 65, 0.25);
+        }
+      }
+    }
+
+    .calculation__result {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+
+      margin: 20px 0 11px;
+
+      font-size: 19px;
+      line-height: 23px;
+      color: #1f2041;
+      font-weight: bold;
+
+      .result__tab {
+        width: 100%;
+
+        border-bottom: 1px dashed rgba(31, 32, 65, 0.25);
+        box-sizing: border-box;
+
+        flex: 1;
+        overflow-x: hidden;
+      }
+    }
+  }
+}

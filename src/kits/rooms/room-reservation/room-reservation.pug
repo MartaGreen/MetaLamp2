@@ -1,5 +1,57 @@
-.form
+-
+  var reservationData = {
+    num: 888,
+    type: "люкс",
+    price: 9990,
+  }
+
+  function convertNumToPrice(num) {
+    num = num.toString()
+    console.log(num);
+    // split("").reverse().join("") - переворачивает строку,чтобы разделить по три с конца
+    // .match(/.{1,3}/g) - деление по три
+    //.reverse() - переворачивает обратно
+    // .map(elem => elem.split("").reverse().join("")) - переворачивает каждый элемент в правильный порядок:
+    // "abcd" стала ["a", "dcb"], после переворота отдельных элементов ["a", "bcd"]
+    return num.split("").reverse().join("").match(/.{1,3}/g).reverse().map(elem => elem.split("").reverse().join("")).join(" ")+"₽"
+  }
+
+.form(class="room-reservation")
+  .room-data
+    .room-data__num
+      .num__article №
+      .num__value= reservationData.num
+      .num__type= `${reservationData.type === "стандартный"? "": reservationData.type}`
+    .room-data__price
+      .price__value #{convertNumToPrice(reservationData.price)}
+      .price__article в сутки
   include ../cross-mixins/calendar/calendar.mixin.pug
   +calendar
   include ../cross-mixins/guests-counter/guests-counter.mixin.pug
   +guestsCounter
+  .calculations 
+    .calculation__item
+      .calculation__type
+        span(class="text")= `${convertNumToPrice(reservationData.price)} x 0 суток`
+      .calculation__price
+        span(class="text")= convertNumToPrice(0)
+    .calculation__item
+      .calculation__type 
+        span(class="text") Сбор за услуги: скидка 2 179₽
+        .calculation__info ¡
+      .calculation__price
+        span(class="text")= convertNumToPrice(0)
+    .calculation__item
+      .calculation__type 
+        span(class="text") Сбор за дополнительные услуги
+        .calculation__info ¡
+      .calculation__price
+        span(class="text")= convertNumToPrice(300)
+    
+    .calculation__result 
+      .result__msg 
+        span(class="text") Итого
+      .result__tab
+      .result__price
+        span(class="text")= convertNumToPrice(reservationData.price * 4 + 0 + 0 + 300)
+  button(class="form__btn find-room__btn" type="button") Забронировать
