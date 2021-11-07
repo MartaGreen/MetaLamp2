@@ -15,6 +15,7 @@
     comments: 65,
   }]
 
-each room in roomData
-  include ./room-details.mixin.pug
-  +roomDetails(room)
+.details
+  each room in roomData
+    include ./room-details.mixin.pug
+    +roomDetails(room)

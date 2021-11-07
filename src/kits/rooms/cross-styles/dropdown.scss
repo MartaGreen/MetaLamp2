@@ -1,4 +1,6 @@
 .dropdown {
+  position: relative;
+
   user-select: none;
   .dropdown__btn {
     width: 100%;
@@ -17,10 +19,6 @@
     align-items: center;
 
     cursor: pointer;
-
-    &.form__input {
-      margin-bottom: 0;
-    }
 
     .btn__name {
       font-size: 14px;
@@ -50,7 +48,7 @@
   }
 
   .dropdown__content {
-    position: relative;
+    position: absolute;
 
     width: 100%;
 

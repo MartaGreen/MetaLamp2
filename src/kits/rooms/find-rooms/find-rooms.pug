@@ -1,7 +1,7 @@
 .form(class="find-room")
   h1(class="form__title") Найдём номера под ваши пожелания
   include ../cross-mixins/calendar/calendar.mixin.pug
-  +calendar
+  +calendar("findRoomCalendar")
 
   include ../cross-mixins/guests-counter/guests-counter.mixin.pug
   +guestsCounter
