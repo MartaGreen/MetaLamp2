@@ -1,0 +1,49 @@
+body {
+  .kits-container {
+    position: relative;
+    width: 1160px;
+
+    .form,
+    .details,
+    .calendar.-visible- {
+      position: absolute;
+    }
+
+    .find-room {
+      top: 0;
+      left: 0;
+    }
+    .room-reservation {
+      top: 0;
+      left: 36.2%;
+    }
+    .calendar.-visible- {
+      top: 0;
+      right: 0;
+    }
+    .login {
+      top: 552px;
+      left: 36.2%;
+    }
+    .register {
+      top: 414px;
+      left: 0;
+    }
+    .details {
+      top: 408px;
+      right: 4.3%;
+    }
+  }
+}
+
+.-show-.-visible- {
+  position: relative;
+  .datepicker {
+    position: relative;
+    top: 0;
+  }
+}
+
+.datepicker {
+  z-index: 1000;
+}

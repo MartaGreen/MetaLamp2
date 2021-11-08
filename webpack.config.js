@@ -5,14 +5,25 @@ const glob = require("glob");
 // const webpack = require("webpack");
 
 // Плагины
-const pugFiles = glob.sync(__dirname + "/src/*.pug"); // получаю все файлы с расширением pug
-const plugins = pugFiles.map(
-  (file) =>
-    new htmlWebpackPlugin({
-      template: file,
-      filename: file.split("/").reverse()[0].replace(/\.pug/, ".html"),
-    })
-);
+// const pugFiles = glob.sync(__dirname + "/src/*.pug"); // получаю все файлы с расширением pug
+// const plugins = pugFiles.map(
+//   (file) =>
+//     new htmlWebpackPlugin({
+//       template: file,
+//       filename: file.split("/").reverse()[0].replace(/\.pug/, ".html"),
+//     })
+// );
+
+const plugins = [
+  new htmlWebpackPlugin({
+    filename: "index.html",
+    template: path.resolve(__dirname, "src", "index.pug"),
+  }),
+  new htmlWebpackPlugin({
+    filename: "pages/ui-kit.html",
+    template: path.resolve(__dirname, "src/pages", "ui-kit", "ui-kit.pug"),
+  }),
+];
 plugins.push(new CleanWebpackPlugin());
 
 module.exports = {

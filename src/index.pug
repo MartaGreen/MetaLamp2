@@ -1,11 +1,22 @@
-.kits-container
-  include ./kits/rooms/find-rooms/find-rooms.pug
-  include ./kits/rooms/room-reservation/room-reservation.pug
-
-  .calendar(class="-show- -visible-")
-    include ./kits/calendar/calendar.pug
-
-  include ./kits/auth/register/register.pug
-  include ./kits/auth/login/login.pug
-
-  include ./kits/rooms/room-details/room-details.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Document
+  body 
+    main(class="main")
+      ul(class="pages")
+        li(class="pages__item")
+          a(href="./pages/ui-kit.html" class="pages__link") UI-kit
+        li(class="pages__item")
+          a(href="./pages/ui-kit.html" class="pages__link") Landing
+        li(class="pages__item")
+          a(href="./pages/ui-kit.html" class="pages__link") Search room
+        li(class="pages__item")
+          a(href="./pages/ui-kit.html" class="pages__link") Room details
+        li(class="pages__item")
+          a(href="./pages/ui-kit.html" class="pages__link") Login
+        li(class="pages__item")
+          a(href="./pages/ui-kit.html" class="pages__link") Register
