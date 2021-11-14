@@ -16,6 +16,8 @@
     return num.split("").reverse().join("").match(/.{1,3}/g).reverse().map(elem => elem.split("").reverse().join("")).join(" ")+"₽"
   }
 
+include ../../shared/buttons/buttons.pug
+
 .form(class="room-reservation")
   .room-data
     .room-data__num
@@ -54,4 +56,4 @@
       .result__tab
       .result__price
         span(class="text")= convertNumToPrice(reservationData.price * 4 + 0 + 0 + 300)
-  button(class="form__btn find-room__btn" type="button") Забронировать
+  +formBtn("Забронировать", ["room-reservation__btn"])

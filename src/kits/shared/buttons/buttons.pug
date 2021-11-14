@@ -1,0 +1,8 @@
+mixin formBtn(name, classes)
+  button(class=classes.join(" ")+" form-btn")= name
+
+mixin additionalField(msg, classes)
+  .additional-field
+    span(class="additional-field__msg")= msg
+    button(class="additional-field__btn")
+

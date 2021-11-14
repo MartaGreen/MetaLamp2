@@ -1,3 +1,5 @@
+include ../../shared/buttons/buttons.pug
+
 .form(class="find-room")
   h1(class="form__title") Найдём номера под ваши пожелания
   include ../cross-mixins/calendar/calendar.mixin.pug
@@ -5,4 +7,4 @@
 
   include ../cross-mixins/guests-counter/guests-counter.mixin.pug
   +guestsCounter
-  button(class="form__btn find-room__btn" type="button") Подобрать номер
+  +formBtn("Подобрать номер", ["find-room__btn"])

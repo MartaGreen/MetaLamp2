@@ -1,3 +1,5 @@
+include ../../shared/buttons/buttons.pug
+
 form(class="register form")
   h1(class="form__title") Регистрация аккаунта
   .form__field
@@ -24,7 +26,5 @@ form(class="register form")
       input(type="checkbox" class="switch__input")
       span(class="switch__slider")
     span(class="offers__msg") Получать спецпредложения
-  button(class="form__btn register__btn") перейти к оплате
-  .form__additional-field
-    span(class="additional-field__msg") Уже есть аккаунт на Toxin
-    button(class="additional-field__btn")
+  +formBtn("перейти к оплате", ["register__btn"])
+  +additionalField("Уже есть аккаунт на Toxin", ["register__additional-field"])

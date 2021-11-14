@@ -8,7 +8,7 @@
     line-height: 18px;
     color: rgba(31, 32, 65, 0.5);
 
-    margin-bottom: 11px;
+    margin-bottom: 7px;
 
     .room-data__num {
       display: flex;
@@ -68,10 +68,11 @@
   }
 
   .form__field.guests-count {
-    margin-bottom: 19px;
+    margin-bottom: 17px;
   }
 
   .calculations {
+    margin-bottom: 9px;
     .calculation__item {
       width: 100%;
 
@@ -119,7 +120,7 @@
       justify-content: space-between;
       align-items: baseline;
 
-      margin: 20px 0 11px;
+      margin: 24px 0 0 0;
 
       font-size: 19px;
       line-height: 23px;

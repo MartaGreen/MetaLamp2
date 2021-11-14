@@ -4,7 +4,7 @@
   .form__gender {
     width: 100%;
     height: 24px;
-    margin-bottom: 13px;
+    margin-bottom: 19px;
 
     display: flex;
     align-items: center;
@@ -61,27 +61,15 @@
     }
   }
 
-  .form__field {
-    .form__input {
-      &.lastname {
-        margin-bottom: 8px;
-      }
-
-      &.password {
-        margin-bottom: 8px;
-      }
-    }
-  }
-
   .form__offers {
     width: 100%;
     height: 24px;
 
     display: flex;
-    align-items: center;
+    align-items: baseline;
     justify-content: start;
 
-    margin-bottom: 11px;
+    margin-bottom: 10px;
 
     .offers__switch {
       position: relative;
@@ -146,7 +134,11 @@
     }
   }
 
-  .form__additional-field .additional-field__btn::before {
+  .form__field.service-data {
+    margin-top: 17px;
+  }
+
+  .additional-field .additional-field__btn::before {
     content: "войти";
   }
 }

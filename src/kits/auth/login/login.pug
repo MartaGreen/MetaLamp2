@@ -3,7 +3,7 @@ form(class="login form")
   .form__field
     input(type="email" placeholder="Email" class="email form__input")
     input(type="password" placeholder="Пароль" class="password form__input")
-  button(class="form__btn login__btn") войти
-  .form__additional-field
-    span(class="additional-field__msg") Нет аккаунта на Toxin?
-    button(class="additional-field__btn")
+  //- button(class="form__btn login__btn -form-btn-") войти
+  include ../../shared/buttons/buttons.pug
+  +formBtn("войти", ["login__btn"])
+  +additionalField("Нет аккаунта на Toxin?", ["login__additional-field"])
