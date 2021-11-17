@@ -1,0 +1,50 @@
+.header {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+
+  width: 1440px;
+
+  padding: 0 9.7%;
+
+  margin-bottom: 100px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  // background: red;
+  .nav {
+    min-width: 53%;
+    margin-left: 18.3%;
+    .nav__list {
+      display: flex;
+      justify-content: space-between;
+
+      list-style: none;
+      padding: 0;
+
+      .nav__item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-left: 20px;
+
+        font-size: 14px;
+        line-height: 17px;
+
+        &.nav__auth {
+          align-items: center;
+          justify-content: space-between;
+
+          .additional-field {
+            margin: 0;
+            .additional-field__btn::before {
+              content: "войти";
+            }
+          }
+          .form-btn {
+            margin: 0 0 0 20px;
+          }
+        }
+      }
+    }
+  }
+}
