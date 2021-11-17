@@ -36,8 +36,12 @@
 
           .additional-field {
             margin: 0;
-            .additional-field__btn::before {
-              content: "войти";
+            .additional-field__btn {
+              width: 87px;
+              height: 34px !important;
+              &.additional-field__btn::before {
+                content: "войти";
+              }
             }
           }
           .form-btn {
