@@ -44,9 +44,11 @@ mixin Header(user)
         li(class="nav__item nav__us") 
           b О нас
         li(class="nav__item nav__offers") Услуги
+          .btn__icon
         li(class="nav__item ") Вакансии
         li(class="nav__item nav__news") Новости
         li(class="nav__item ") Соглашения
+          .btn__icon 
 
         if (user === "")
           li(class="nav__item nav__auth")

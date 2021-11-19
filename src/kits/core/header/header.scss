@@ -1,15 +1,11 @@
 .header {
   display: flex;
-  justify-content: start;
+  justify-content: space-between;
   align-items: center;
 
-  width: 1440px;
+  width: 80.5%;
+  margin: 0 auto;
 
-  padding: 0 9.7%;
-
-  margin-bottom: 100px;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
-  // background: red;
   .nav {
     min-width: 53%;
     margin-left: 18.3%;
@@ -30,6 +26,26 @@
         font-size: 14px;
         line-height: 17px;
 
+        cursor: pointer;
+
+        .btn__icon {
+          display: flex;
+          align-items: flex-start;
+
+          width: 7px;
+          height: 7px;
+
+          margin: 0 8px 0 8px;
+
+          border-left: 2px solid rgba(31, 32, 65, 0.5);
+          border-bottom: 2px solid rgba(31, 32, 65, 0.5);
+          transform: rotate(-45deg);
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
         &.nav__auth {
           align-items: center;
           justify-content: space-between;
@@ -46,6 +62,8 @@
           }
           .form-btn {
             margin: 0 0 0 20px;
+            width: 196px;
+            height: 34px;
           }
         }
       }
