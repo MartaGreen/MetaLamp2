@@ -1,14 +1,8 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  width: 80.5%;
-  margin: 0 auto;
-
   .nav {
     min-width: 53%;
     margin-left: 18.3%;
+
     .nav__list {
       display: flex;
       justify-content: space-between;

@@ -1,0 +1,10 @@
+.header,
+.footer .footer__main-part,
+.footer .footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 80.5%;
+  margin: 0 auto;
+}
