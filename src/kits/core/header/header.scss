@@ -1,6 +1,7 @@
 .header {
+  min-height: 70px;
   .nav {
-    min-width: 53%;
+    min-width: 52.4%;
     margin-left: 18.3%;
 
     .nav__list {
@@ -59,6 +60,17 @@
             width: 196px;
             height: 34px;
           }
+        }
+
+        &.nav__user {
+          min-width: 120px;
+          border-left: 1px solid rgba(31, 32, 65, 0.1);
+
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+
+          margin-left: 19px;
         }
       }
     }

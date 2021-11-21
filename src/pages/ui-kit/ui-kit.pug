@@ -19,8 +19,12 @@ html(lang="en")
       include ../../kits/rooms/room-details/room-details.pug
     
     .core 
+      include ../../kits/core/header/header.pug
       .core__header
-        include ../../kits/core/header/header.pug
         +Header("")
+      .core__header-authed
+        +Header("Юлий Цезарь")
       .core__footer
         include ../../kits/core/footer/footer.pug
+      .core__footer-mobile 
+        
