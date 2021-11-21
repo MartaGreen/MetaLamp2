@@ -40,7 +40,8 @@ body {
   .core {
     .core__header,
     .core__footer,
-    .core__header-authed {
+    .core__header-authed,
+    .core__footer-mobile {
       position: absolute;
       top: 1200px;
       left: 0;
@@ -59,6 +60,11 @@ body {
 
     .core__footer {
       top: 1400px;
+    }
+
+    .core__footer-mobile {
+      top: 2000px;
+      background: none;
     }
   }
 }
