@@ -18,10 +18,12 @@ const plugins = [
   new htmlWebpackPlugin({
     filename: "index.html",
     template: path.resolve(__dirname, "src", "index.pug"),
+    chunks: ["index"],
   }),
   new htmlWebpackPlugin({
     filename: "pages/ui-kit.html",
     template: path.resolve(__dirname, "src/pages", "ui-kit", "ui-kit.pug"),
+    chunks: ["pages_styles", "ui_kit"],
   }),
 ];
 plugins.push(new CleanWebpackPlugin());
@@ -31,9 +33,8 @@ module.exports = {
   mode: "development",
   entry: {
     index: "./index.js",
-    styles_import: "./imports/styles.imports.js",
-    // datepicker: "../node_modules/air-datepicker/air-datepicker.js",
-    // jquery: "../node_modules/jquery/dist/jquery.min.js",
+    pages_styles: "./pages/pages.js",
+    ui_kit: "./pages/ui-kit/ui-kit.js",
   },
   output: {
     filename: "[name].[contenthash].js",

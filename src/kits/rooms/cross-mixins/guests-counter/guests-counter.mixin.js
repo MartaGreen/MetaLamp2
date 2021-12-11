@@ -1,4 +1,5 @@
 import "./guests-counter.mixin.scss";
+import "../../cross-styles/dropdown.scss";
 
 // Guests counter value
 class Counter {

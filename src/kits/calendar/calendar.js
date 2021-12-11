@@ -1,3 +1,5 @@
+import "air-datepicker/air-datepicker.css";
+import "./calendar.scss";
 import AirDatepicker from "air-datepicker";
 
 let startDateInp;

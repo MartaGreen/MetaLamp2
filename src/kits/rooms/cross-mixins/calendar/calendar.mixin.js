@@ -1,3 +1,5 @@
+import "../../../calendar/calendar";
+import "../../cross-styles/dropdown.scss";
 import "./calendar.mixin.scss";
 
 export class Calendars {
