@@ -19,3 +19,74 @@
     min-width: 300px;
   }
 }
+
+@media screen and (max-width: 1440px) {
+}
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 768px) {
+  .main .find-room {
+    margin-left: 5%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+}
+@media screen and (max-width: 375px) {
+  .main {
+    .form {
+      padding: 40px 15px 28px 15px;
+
+      .datepicker .air-datepicker {
+        // padding: 20px 13px 5px 13px;
+      }
+
+      .calendar.-show- .datepicker {
+        width: 84%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .main .find-room {
+    margin-left: 2%;
+  }
+}
+
+// @media all and (max-width: 490px) {
+//   .main .find-room {
+//     margin-left: 2%;
+//   }
+// }
+
+// @media all and (max-width: 425px) {
+//   .main .find-room {
+//     .calendar {
+//       width: 100%;
+//       .datepicker {
+//         width: 100%;
+//         .air-datepicker {
+//           width: 73%;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media all and (max-width: 380px) {
+//   .main .find-room {
+//     padding: 40px 10px 28px 10px;
+
+//     .calendar {
+//       width: 100%;
+//       .datepicker {
+//         width: 100%;
+//         .air-datepicker {
+//           width: 80%;
+//         }
+//       }
+//     }
+//   }
+// }

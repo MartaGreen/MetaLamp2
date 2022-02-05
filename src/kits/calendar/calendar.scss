@@ -1,11 +1,13 @@
 .datepicker {
   font-family: "Montserrat";
 
+  z-index: 3000;
+
   margin-bottom: 50px;
   .air-datepicker {
     padding: 20px 20px 5px 20px;
 
-    width: 278px;
+    width: 100%;
 
     .air-datepicker--navigation {
       border-bottom: 70px;
