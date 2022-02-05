@@ -1,0 +1,21 @@
+.main {
+  position: relative;
+
+  min-height: 830px;
+  max-width: 1920px;
+  width: 100vw;
+  min-width: 320px;
+
+  background: no-repeat;
+  background-size: cover;
+
+  .find-room {
+    position: absolute;
+    top: 140px;
+    margin-left: 10%;
+
+    max-width: 380px;
+    width: 90%;
+    min-width: 300px;
+  }
+}
