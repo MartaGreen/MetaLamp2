@@ -20,8 +20,13 @@ body {
       left: 36.2%;
     }
     .calendar.-visible- {
-      top: 0;
-      right: 0;
+      top: 1px;
+      right: 42px;
+      width: 278px;
+
+      .datepicker {
+        width: 100%;
+      }
     }
     .login {
       top: 552px;
@@ -32,7 +37,7 @@ body {
       left: 0;
     }
     .details {
-      top: 408px;
+      top: 410px;
       right: 4.3%;
     }
   }
