@@ -23,16 +23,29 @@ mixin Header(user)
             lineargradient(id='paint2_linear_119399:38' x1='20' y1='0' x2='20' y2='40' gradientunits='userSpaceOnUse')
               stop(stop-color='#BC9CFF')
               stop(offset='1' stop-color='#8BA4F9')
-      
+
       nav(class="nav")
         ul(class="nav__list")
-          li(class="nav__item nav__us") 
+          li(class="nav__item nav__dropdown") 
+
+            .dropdown(class="dropdown-offer")
+              button(class="dropdown__btn")
+                b(class="dropdown__btn-text") О нас
+                .dropdown__btn-icon
+              .dropdown__content
+                p(class="dropdown__item") О нас
+                p(class="dropdown__item") Услуги
+                p(class="dropdown__item") Вакансии
+                p(class="dropdown__item") Новости
+                p(class="dropdown__item") Соглашения
+      
+          li(class="nav__item nav__us nav__offer") 
             b О нас
-          li(class="nav__item nav__offers")  Услуги
+          li(class="nav__item nav__offers nav__offer")  Услуги
             .btn__icon
-          li(class="nav__item ") Вакансии
-          li(class="nav__item nav__news") Новости
-          li(class="nav__item ") Соглашения
+          li(class="nav__item nav__offer") Вакансии
+          li(class="nav__item nav__news nav__offer") Новости
+          li(class="nav__item nav__offer") Соглашения
             .btn__icon 
 
           if (user === "")
@@ -41,6 +54,23 @@ mixin Header(user)
               +formBtn("зарегестрироваться", ["header__form-btn"])
               //- button(class="additional-field__btn") войти
               //- button(class="form__btn login__btn") зарегестрироваться
+
+            li(class="nav__item  dropdown-auth nav__auth")
+              .dropdown(class="dropdown-offer")
+                button(class="dropdown__btn")
+                  img(class="dropdown__user-icon" src='https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-user-avatars-dreamstale-lineal-dreamstale-9.png')
+                  .dropdown__btn-icon
+                .dropdown__content
+                  .dropdown__item 
+                    +additionalField("", ["header__additional-field"])
+                    +formBtn("зарегестрироваться", ["header__form-btn"])
           else 
             li(class="nav__item nav__user")= user
+            li(class="nav__item  nav__user dropdown-user")
+              .dropdown(class="dropdown-offer")
+                button(class="dropdown__btn")
+                  img(class="dropdown__user-icon" src='https://img.icons8.com/external-dreamstale-lineal-dreamstale/32/000000/external-user-avatars-dreamstale-lineal-dreamstale-9.png')
+                  .dropdown__btn-icon
+                .dropdown__content
+                  .dropdown__item= user
 
