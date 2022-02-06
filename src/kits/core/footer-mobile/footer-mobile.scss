@@ -1,24 +1,42 @@
 .footer.footer-mobile {
   background: none;
   .footer-inner {
-    width: 53.3%;
+    width: 54%;
 
-    margin: 0 auto;
+    margin: 0 auto 50px auto;
     background: white;
-    padding: 129px 0 120px 0;
+    padding: 31px 0 117px 0;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
-    .logo {
-      // width: 110px;
-      text-align: center;
-      margin-bottom: 20px;
+
+    .footer__main-part {
+      justify-content: center;
+    }
+
+    .menu {
+      display: none;
+    }
+
+    .info {
+      .text {
+        display: none;
+      }
+      .logo {
+        // width: 110px;
+        text-align: center;
+        margin-bottom: 13px;
+      }
+    }
+
+    .footer__split-line {
+      display: none;
     }
 
     .footer__copyright {
       flex-direction: column;
-      min-height: 66px;
+      min-height: 68px;
     }
   }
 }
