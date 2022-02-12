@@ -3,7 +3,7 @@
   width: 100vw;
 
   .header-inner {
-    min-width: 320px;
+    min-width: 300px;
     max-width: 1440px;
     margin: 0 auto;
 
@@ -20,6 +20,15 @@
 
         font-size: 14px;
 
+        width: 100%;
+        height: 44px;
+
+        background: #ffffff;
+
+        padding: 12px 14px;
+
+        cursor: pointer;
+
         .dropdown__btn-icon {
           width: 5px;
           height: 5px;
@@ -34,6 +43,8 @@
       .dropdown__content {
         display: none;
         &.-show- {
+          position: absolute;
+
           display: block;
           z-index: 1000;
 
