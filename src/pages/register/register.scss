@@ -1,0 +1,35 @@
+.main {
+  min-height: 684px;
+  min-width: 320px;
+  // max-width: 1920px;
+
+  background: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form.register {
+    margin: 0 10px;
+    .additional-field .additional-field__btn::before {
+      content: "войти";
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main .form.register {
+    .form__title {
+      font-size: 18px;
+    }
+
+    .form__field .field__name {
+      font-size: 12px;
+    }
+
+    .form__offers .offers__msg {
+      font-size: 12px;
+    }
+  }
+}
