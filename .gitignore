@@ -1,2 +1,4 @@
 .vscode
 .prettirrc.yml
+dist
+node_modules
