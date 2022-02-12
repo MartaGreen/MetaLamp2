@@ -1,0 +1,19 @@
+.main {
+  min-height: 684px;
+  min-width: 320px;
+  // max-width: 1920px;
+
+  background: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .form.login {
+    margin: 0 10px;
+    .additional-field .additional-field__btn::before {
+      content: "войти";
+    }
+  }
+}

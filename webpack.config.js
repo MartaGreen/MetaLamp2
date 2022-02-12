@@ -30,6 +30,11 @@ const plugins = [
     template: path.resolve(__dirname, "src/pages", "landing", "landing.pug"),
     chunks: ["pages_styles", "landing"],
   }),
+  new htmlWebpackPlugin({
+    filename: "pages/login.html",
+    template: path.resolve(__dirname, "src/pages", "login", "login.pug"),
+    chunks: ["pages_styles", "login"],
+  }),
 ];
 plugins.push(new CleanWebpackPlugin());
 
@@ -41,6 +46,7 @@ module.exports = {
     pages_styles: "./pages/pages.js",
     ui_kit: "./pages/ui-kit/ui-kit.js",
     landing: "./pages/landing/landing.js",
+    login: "./pages/login/login.js",
   },
   output: {
     filename: "[name].[contenthash].js",
