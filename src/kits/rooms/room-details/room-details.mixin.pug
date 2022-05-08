@@ -19,8 +19,8 @@ mixin roomDetails(room)
       .info__item 
         .info__num
           .num__article №
-          .num__value= room.num
-          .num__type= `${room.type === "стандартный"? "": room.type}`
+          .num__value= room.roomNum
+          .num__type= `${room.roomType === "стандартный"? "": room.roomType}`
         .info__price
           .price__value #{convertNumToPrice(room.price)}₽
           .price__article в сутки
@@ -43,5 +43,5 @@ mixin roomDetails(room)
                     stop(stop-color='#BC9CFF')
                     stop(offset='1' stop-color='#8BA4F9')
         .info__comments
-          .comments__value= room.comments
+          .comments__value= room.countOfReviews
           .comments__article Отзывов

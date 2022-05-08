@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "MetaLamp task 2& Practice",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",

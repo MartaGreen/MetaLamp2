@@ -1,8 +1,8 @@
-const path = require("path");
-const htmlWebpackPlugin = require("html-webpack-plugin");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const glob = require("glob");
-// const webpack = require("webpack");
+import path from "path";
+import htmlWebpackPlugin from "html-webpack-plugin";
+import { CleanWebpackPlugin } from "clean-webpack-plugin";
+
+const __dirname = path.resolve();
 
 // Плагины
 // const pugFiles = glob.sync(__dirname + "/src/*.pug"); // получаю все файлы с расширением pug
@@ -40,10 +40,15 @@ const plugins = [
     template: path.resolve(__dirname, "src/pages", "register", "register.pug"),
     chunks: ["pages_styles", "register"],
   }),
+  new htmlWebpackPlugin({
+    filename: "pages/search-room.html",
+    template: path.resolve(__dirname, "src/pages", "search-room", "search-room.pug"),
+    chunks: ["pages_styles", "searchRoom"],
+  }),
 ];
 plugins.push(new CleanWebpackPlugin());
 
-module.exports = {
+export default {
   context: path.resolve(__dirname, "src"),
   mode: "development",
   entry: {
@@ -53,6 +58,7 @@ module.exports = {
     landing: "./pages/landing/landing.js",
     login: "./pages/login/login.js",
     register: "./pages/register/register.js",
+    searchRoom: "./pages/search-room/roomsData.js",
   },
   output: {
     filename: "[name].[contenthash].js",
